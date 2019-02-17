@@ -1,0 +1,13 @@
+header {
+    margin-block-end: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    float: right;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
