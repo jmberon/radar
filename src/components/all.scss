@@ -91,6 +91,7 @@ main {
     height: 100%;
 }
 
+// hero
 .hero-image {
     // background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/coins.jpg");
     background-image: url("../images/coins.jpg");
@@ -128,3 +129,42 @@ main {
     }
 }
 
+.main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 3em 1em;
+}
+//figures
+section.figures {
+
+    align-self: center;
+    border: 1px solid yellow;
+    grid-column: 2 / 12;
+    grid-row: 1;
+    margin: 0;
+
+    h5 {
+        background-color: $primary;
+        border-radius: 5px;
+        color: #fff;
+        font-family: "MayekaDemiBold";
+        padding: 1rem;
+    }
+}
+//services
+section.services {
+    align-self: center;
+    border: 1px solid blue;
+    grid-column: 2 / 12;
+    grid-row: 2;
+    margin: 0;
+}
+
+//customers
+section.customers {
+    align-self: center;
+    border: 1px solid red;
+    grid-column: 2 / 12;
+    grid-row: 3;
+    margin: 0;
+}

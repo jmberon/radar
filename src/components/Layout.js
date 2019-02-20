@@ -8,6 +8,7 @@ export default ({ children }) => (
         <Navbar></Navbar>
 
         <main>
+
             <div className="hero-image">
                 <div className="hero-container">
                     <div className="hero-text">
@@ -17,10 +18,25 @@ export default ({ children }) => (
                 </div>
             </div>
 
+            <div class="main">
+                <section className="figures">
+                    <h5>
+                        Puedes aumentar tu dinero disponible en caja, monitoreando tu inventario en tiempo real SIN PARAR TU NEGOCIO
+                    </h5>
+                    <ul>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
+                    </ul>
+                </section>
+                <section className="services">
 
+                </section>
+                <section className="customers">
 
+                </section>
+            </div>
         </main>
-
         <footer></footer>
     </div>
 )
