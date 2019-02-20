@@ -1,6 +1,14 @@
 @font-face {
-    font-family: MayekaBold;
+    font-family: MayekaDemiBold;
     src: url("../fonts/Mayeka\ Demi\ Bold\ Demo.otf") format("opentype");
+}
+@font-face {
+    font-family: MayekaBold;
+    src: url("../fonts/Mayeka\ Bold\ Demo.otf") format("opentype");
+}
+@font-face {
+    font-family: MayekaRegular;
+    src: url("../fonts/Mayeka\ Regular\ Demo.otf") format("opentype");
 }
 
 // Reset
@@ -59,10 +67,18 @@ header {
                 display: inline-block;
 
                 a {
-                    font-size: .9em;
+                    color: $primary-invert;
+                    font-family: "MayekaBold";
                     display: block;
-                    padding: .5em 5em;
+                    margin: 0 3em;
+                    padding: .5em;
                     text-decoration: none;
+                    border-bottom: 2px solid transparent;
+
+                    &:hover, &:active {
+                        color: $primary-invert;
+                        border-color: $primary
+                    }
                 }
             }
 
@@ -76,16 +92,17 @@ main {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/coins.jpg");
-    height: 80%;
-    background-position: center;
-    background-repeat: no-repeat;
+    // background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/coins.jpg");
+    background-image: url("../images/coins.jpg");
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 80%;
     position: relative;
 }
 
 .hero-text {
-    font-family: "MayekaBold";
+    font-family: "MayekaDemiBold";
     text-align: center;
     position: absolute;
     top: 50%;
