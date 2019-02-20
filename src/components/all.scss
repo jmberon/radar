@@ -101,16 +101,30 @@ main {
     position: relative;
 }
 
-.hero-text {
-    font-family: "MayekaDemiBold";
+.hero-container {
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255,255,255,0.5);
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    font-family: "MayekaBold";
 
     h1 {
         color: $primary;
+    }
+
+    p {
+        color: $primary-invert;
+        font-size: 1.25rem;
     }
 }
 

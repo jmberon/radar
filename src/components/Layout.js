@@ -9,9 +9,11 @@ export default ({ children }) => (
 
         <main>
             <div className="hero-image">
-                <div className="hero-text">
-                    <h1>Mueve tu negocio</h1>
-                    <p>Incrementando tu flujo de caja</p>
+                <div className="hero-container">
+                    <div className="hero-text">
+                        <h1>MUEVE TU NEGOCIO</h1>
+                        <p>Incrementando tu flujo de caja</p>
+                    </div>
                 </div>
             </div>
 
