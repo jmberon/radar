@@ -1,16 +1,15 @@
 import React from "react"
 import { Navbar } from "./Navbar"
-import styles from "./Layout.module.css"
+import "./all.scss"
 
 
 export default ({ children }) => (
-    <div>
+    <div className="layout">
         <Navbar></Navbar>
 
         <main>
-
-            <div className={styles.heroImage}>
-                <div className={styles.heroText}>
+            <div className="hero-image">
+                <div className="hero-text">
                     <h1>Mueve tu negocio</h1>
                     <p>Incrementando tu flujo de caja</p>
                 </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import styles from "./Navbar.module.css"
 import logo from "../images/logo.png"
 
 const ListLink = props => (
@@ -12,7 +11,7 @@ const ListLink = props => (
 
 const Navbar = () => (
     <header>
-        <Link className={styles.logo} to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
+        <Link className="logo" to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
             <img src={logo} alt="Radar, Control en Movimiento"></img>
         </Link>
         <nav>
