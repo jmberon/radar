@@ -50,6 +50,12 @@ export default ({ children }) => (
                     <p>
                         ¡Desarrollamos un modelo PRÁCTICO, FÁCIL y RÁPIDO para gestionar compras e inventarios que realmente te sorprenderá!
                     </p>
+                    <div className="download-app">
+                        <button type="button">APP</button>
+                        <span className="marketing">Construimos una PODEROSA APP para determinar TODO lo que impacta en tu negocio</span>
+                        <span className="arrow"></span>
+                        <span className="explore">EXPLORA EL DEMO</span>
+                    </div>
                 </section>
                 <section className="services">
 

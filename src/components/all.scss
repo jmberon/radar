@@ -19,7 +19,7 @@ body {
 
 // Config vars
 $radar-green: #078f38;
-$radar-light-grey: #898989;
+$radar-light-grey: #ECECEC;
 $radar-dark-grey: #5d5d5d;
 
 $primary: $radar-green;
@@ -211,4 +211,63 @@ section.customers {
     grid-column: 2 / 12;
     grid-row: 3;
     margin: 0;
+}
+
+//
+.download-app {
+    background: $secondary;
+    position: relative;
+    padding: 0.75rem 0.75rem 0.75rem 5rem;
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 5px;
+
+    button {
+        font-family: "MayekaBold";
+        background-color: $primary;
+        border-top-width: 0;
+        border-right-width: 0;
+        border-color: $secondary;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        position: absolute;
+        top: -1px;
+        left: 0;
+        font-size: 1.5rem;
+    }
+
+    .marketing {
+        font-family: "MayekaBold";
+        color: $primary-invert;
+        font-size: 0.9rem;
+    }
+
+    .arrow {
+        background-color: $primary;
+        border-radius: 50%;
+        color: #fff;
+        height: 20px;
+        margin: 0 0.75rem;
+        padding: 10px;
+        position: relative;
+        width: 20px;
+
+        &:after {
+            content: "➡"
+        }
+    }
+
+    .explore {
+        color: $primary-invert;
+        font-family: "MayekaBold";
+        padding-bottom: 1px;
+        border-bottom: 4px solid $primary;
+        position: relative;
+        top: -3px;
+    }
+
+
 }
