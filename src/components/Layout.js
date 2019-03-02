@@ -1,6 +1,12 @@
 import React from "react"
 import { Navbar } from "./Navbar"
 import "./all.scss"
+import honda from "../images/companies/honda.png"
+import kawa from "../images/companies/kawasaki.png"
+import yamaha from "../images/companies/yamaha.png"
+import suzuki from "../images/companies/suzuki.png"
+import ktm from "../images/companies/ktm.png"
+import auteco from "../images/companies/auteco.png"
 
 
 export default ({ children }) => (
@@ -58,7 +64,7 @@ export default ({ children }) => (
                     </div>
                 </section>
                 <section className="services">
-                    <h5>PUEDES CONTAR CON:</h5>
+                    <h5 className="subtitle">PUEDES CONTAR CON:</h5>
                     <div className="services-list">
                         <div className="service">
                             <h3>Consultoría</h3>
@@ -89,7 +95,17 @@ export default ({ children }) => (
                     </div>
                 </section>
                 <section className="customers">
-
+                    <h5 className="subtitle">
+                        ALGUNAS EMPRESAS CON LAS QUE HEMOS TRABAJADO
+                    </h5>
+                    <ul>
+                        <li><img src={honda} alt="honda" /></li>
+                        <li><img src={kawa} alt="kawasaki" /></li>
+                        <li><img src={yamaha} alt="yamaha" /></li>
+                        <li><img src={suzuki} alt="suzuki" /></li>
+                        <li><img src={ktm} alt="ktm" /></li>
+                        <li><img src={auteco} alt="auteco" /></li>
+                    </ul>
                 </section>
             </div>
         </main>

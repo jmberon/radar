@@ -213,6 +213,7 @@ section.services {
     .service {
         align-items: flex-start;
         background: $secondary;
+        color: $primary-invert;
         display: flex;
         flex-grow: 1;
         flex-basis: 20%;
@@ -254,7 +255,11 @@ section.services {
             border: 0;
             border-radius: $border-radius;
             margin-top: 3em;
+            cursor: pointer;
 
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
     }
@@ -268,6 +273,23 @@ section.customers {
     grid-column: 2 / 12;
     grid-row: 3;
     margin: 0;
+
+    ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0;
+        align-items: center;
+
+        li {
+            flex: 1 1 16.6667%;
+
+            img {
+                max-width: 80%;
+            }
+        }
+
+    }
 }
 
 //
@@ -327,4 +349,13 @@ section.customers {
     }
 
 
+}
+
+.subtitle {
+    text-transform: uppercase;
+    color: $primary-invert;
+    font-family: "MayekaBold";
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0;
 }
