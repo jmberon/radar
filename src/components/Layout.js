@@ -58,7 +58,35 @@ export default ({ children }) => (
                     </div>
                 </section>
                 <section className="services">
-
+                    <h5>PUEDES CONTAR CON:</h5>
+                    <div className="services-list">
+                        <div className="service">
+                            <h3>Consultoría</h3>
+                            <p>Conéctamos el inventario con tu caja para que tengas más dinero disponible</p>
+                            <ul>
+                                <li>Descubrimos OPORTUNIDADES</li>
+                                <li>Metodología a la medida</li>
+                                <li>Te entregamos resultados de alto impacto</li>
+                            </ul>
+                            <span>logo</span>
+                        </div>
+                        <div className="service">
+                            <h3>Conteo de Inventarios</h3>
+                            <p>Tu negocio NO PARA en ningún momento </p>
+                            <ul>
+                                <li>Metodología innovadora de conteo</li>
+                                <li>Personal interno o externo</li>
+                                <li>Sistema de sticker</li>
+                            </ul>
+                            <span>logo</span>
+                        </div>
+                        <div className="service">
+                            <h3>Talleres y Cursos</h3>
+                            <p>Tips cortos y EFECTIVOS</p>
+                            <button>DESCUBRE LOS TIPS!!</button>
+                            <span>logo</span>
+                        </div>
+                    </div>
                 </section>
                 <section className="customers">
 

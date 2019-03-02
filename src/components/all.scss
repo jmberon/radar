@@ -20,11 +20,13 @@ body {
 // Config vars
 $radar-green: #078f38;
 $radar-light-grey: #ECECEC;
-$radar-dark-grey: #5d5d5d;
+$radar-dark-grey: #5D5D5D;
 
 $primary: $radar-green;
 $secondary: $radar-light-grey;
 $primary-invert: $radar-dark-grey;
+
+$border-radius: 7px;
 
 //
 .layout {
@@ -144,7 +146,7 @@ section.figures {
 
     h5 {
         background-color: $primary;
-        border-radius: 5px;
+        border-radius: $border-radius;
         color: #fff;
         font-family: "MayekaDemiBold";
         padding: 1rem;
@@ -202,6 +204,61 @@ section.services {
     grid-column: 2 / 12;
     grid-row: 2;
     margin: 0;
+
+    .services-list {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .service {
+        align-items: flex-start;
+        background: $secondary;
+        display: flex;
+        flex-grow: 1;
+        flex-basis: 20%;
+        flex-direction: column;
+        margin: 0 2rem;
+        padding: 15px;
+        position: relative;
+        border-radius: $border-radius;
+        font-family: "MayekaBold";
+        font-size: 16px;
+
+        h3 {
+            max-width: 65%;
+        }
+
+        p {
+            color: $primary;
+        }
+
+        ul {
+            padding-left: 1em;
+        }
+
+        p, ul li {
+            font-size: 0.8em;
+        }
+
+        span {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+        }
+
+        button {
+            background: #B6B6B6;
+            color: $primary-invert;
+            font-family: "MayekaBold";
+            padding: 0.75em;
+            border: 0;
+            border-radius: $border-radius;
+            margin-top: 3em;
+
+        }
+
+    }
+
 }
 
 //customers
@@ -221,7 +278,7 @@ section.customers {
     text-align: center;
     width: 85%;
     margin: 0 auto;
-    border-radius: 5px;
+    border-radius: $border-radius;
 
     button {
         font-family: "MayekaBold";
@@ -229,7 +286,7 @@ section.customers {
         border-top-width: 0;
         border-right-width: 0;
         border-color: $secondary;
-        border-radius: 5px;
+        border-radius: $border-radius;
         color: #fff;
         cursor: pointer;
         padding: 0.5rem 1rem;
