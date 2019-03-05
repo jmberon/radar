@@ -32,7 +32,6 @@ $border-radius: 7px;
 .layout {
     height: 100vh;
 }
-
 // header
 header {
     display: grid;
@@ -64,9 +63,20 @@ header {
             display: flex;
             justify-content: flex-end;
 
+            button {
+                display: block;
+                @media (min-width: 800px) {
+                    display: none;
+                }
+
+            }
+
             li {
                 position: relative;
-                display: inline-block;
+                display: none;
+                @media (min-width: 800px) {
+                    display: inline-block;
+                }
 
                 a {
                     color: $primary-invert;
