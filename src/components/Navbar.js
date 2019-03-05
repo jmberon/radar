@@ -19,9 +19,9 @@ const Navbar = () => (
                 <ListLink to="/">Inicio</ListLink>
                 <ListLink to="/tips/">Tips</ListLink>
                 <ListLink to="/news/">Noticias</ListLink>
-                <a className="burger" onclick="myFunction()">
+                {/* <a className="burger" onclick="myFunction()">
                     <i className="fa fa-bars">°°°</i>
-                </a>
+                </a> */}
             </ul>
         </nav>
     </header>
