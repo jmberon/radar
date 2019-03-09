@@ -1,6 +1,7 @@
 import React from "react"
-import Layout from "../components/Layout"
+import { Navbar } from "../components/Navbar";
 
-export default () => <Layout>
-    <div>Noticias</div>
-</Layout>
+export default () => <div className="layout">
+    <Navbar></Navbar>
+    <div>Encuentre pronto aqui nuestras noticias</div>
+</div>
