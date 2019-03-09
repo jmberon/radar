@@ -69,16 +69,16 @@ header {
 
             span {
                 display: block;
-                @media (min-width: 800px) {
+                @media (min-width: 600px) {
                     display: none;
                 }
 
             }
 
-            li {
+            > li {
                 position: relative;
                 display: none;
-                @media (min-width: 800px) {
+                @media (min-width: 600px) {
                     display: inline-block;
                 }
 
@@ -86,10 +86,16 @@ header {
                     color: $primary-invert;
                     font-family: "MayekaBold";
                     display: block;
-                    margin: 0 3em;
+                    margin: 0 1.5em;
                     padding: .5em;
                     text-decoration: none;
                     border-bottom: 2px solid transparent;
+                    transition: all 1s;
+
+                    @media (min-width: 800px) {
+                        margin: 0 3em;
+                        display: inline-block;
+                    }
 
                     &:hover, &:active {
                         color: $primary-invert;
@@ -98,6 +104,36 @@ header {
                 }
             }
 
+        }
+    }
+
+    ul.responsiveNav {
+        border: 1px solid green;
+        position: absolute;
+        top: 90px;
+        z-index: 1;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        left: 0;
+        right: 0;
+
+        @media (min-width: 600px) {
+            display: none;
+        }
+
+        li {
+            text-align: center;
+            background: $radar-light-grey;
+            border: 1px solid $radar-green;
+
+            a {
+                display: block;
+                padding: 1rem 0;
+                text-decoration: none;
+                font-family: "MayekaDemiBold";
+                color: $radar-dark-grey;
+            }
         }
     }
 }
