@@ -23,6 +23,7 @@ export default class Layout extends Component {
         const settings = {
             arrows: true,
             autoplay: true,
+            className: "slide",
             dots: true,
             fade: true,
             infinite: true,
@@ -37,20 +38,27 @@ export default class Layout extends Component {
 
             <main>
                 {/* <div className="hero-image">
-                    <div className="hero-container">
-                        <div className="hero-text">
-                            <h1>MUEVE TU NEGOCIO</h1>
-                            <p>Incrementando tu flujo de caja</p>
-                        </div>
-                    </div>
                 </div> */}
                 <Slider {...settings}>
                     <div>
                         <div className="hero1">
+                            <div className="hero-container">
+                                <div className="hero-text">
+                                    <h1>MUEVE TU NEGOCIO</h1>
+                                    <p>Incrementando tu flujo de caja</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div>
                         <div className="hero2">
+                            <div className="hero-container">
+                                <div className="hero-text">
+                                    <h1>DESCUBRE CÓMO PUEDES</h1>
+                                    <h1>GANAR MÁS DINERO</h1>
+                                    <p>con lo que tienes hoy</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </Slider>
