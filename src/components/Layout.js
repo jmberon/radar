@@ -7,12 +7,22 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import "./all.scss"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import honda from "../images/companies/honda.png"
+
 import kawa from "../images/companies/kawasaki.png"
-import yamaha from "../images/companies/yamaha.png"
-import suzuki from "../images/companies/suzuki.png"
-import ktm from "../images/companies/ktm.png"
-import auteco from "../images/companies/auteco.png"
+import casahonda from "../images/companies/CasaHonda.png"
+import credibike from "../images/companies/Credibike.png"
+import hondabogota from "../images/companies/HondaBogota.png"
+import hondanarino from "../images/companies/HondaNarino.png"
+import motoagil from "../images/companies/Motoagil.png"
+import motomax from "../images/companies/Motomax.jpeg"
+import motosas from "../images/companies/MotoSAS.png"
+import motosymotos from "../images/companies/MotosYMotos.jpeg"
+import servihonda from "../images/companies/Servihonda.jpeg"
+import zafras from "../images/companies/Zafras.jpeg"
+
+import consultoria from "../images/services/Consultoria.png"
+import inventarios from "../images/services/Inventarios.png"
+import talleres from "../images/services/Talleres.png"
 
 library.add(faArrowRight)
 
@@ -32,13 +42,22 @@ export default class Layout extends Component {
             slidesToShow: 1,
             slidesToScroll: 1
         };
+        const customerSettings = {
+            arrows: true,
+            autoplay: true,
+            dots: false,
+            fade: true,
+            infinite: true,
+            pauseOnHover: false,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        };
 
         return (<div className="layout">
             <Navbar></Navbar>
 
             <main>
-                {/* <div className="hero-image">
-                </div> */}
                 <Slider {...settings}>
                     <div>
                         <div className="hero1">
@@ -115,7 +134,7 @@ export default class Layout extends Component {
                                     <li>Metodología a la medida</li>
                                     <li>Te entregamos resultados de alto impacto</li>
                                 </ul>
-                                <span>logo</span>
+                                <img src={consultoria} alt="consultoria"></img>
                             </div>
                             <div className="service">
                                 <h3>Conteo de Inventarios</h3>
@@ -125,28 +144,41 @@ export default class Layout extends Component {
                                     <li>Personal interno o externo</li>
                                     <li>Sistema de sticker</li>
                                 </ul>
-                                <span>logo</span>
+                                <img src={inventarios} alt="inventarios"></img>
                             </div>
                             <div className="service">
                                 <h3>Talleres y Cursos</h3>
                                 <p>Tips cortos y EFECTIVOS</p>
                                 <button>DESCUBRE LOS TIPS!!</button>
-                                <span>logo</span>
+                                <img src={talleres} alt="talleres"></img>
                             </div>
                         </div>
                     </section>
                     <section className="customers">
                         <h5 className="subtitle">
                             ALGUNAS EMPRESAS CON LAS QUE HEMOS TRABAJADO
-                    </h5>
-                        <ul>
-                            <li><img src={honda} alt="honda" /></li>
-                            <li><img src={kawa} alt="kawasaki" /></li>
-                            <li><img src={yamaha} alt="yamaha" /></li>
-                            <li><img src={suzuki} alt="suzuki" /></li>
-                            <li><img src={ktm} alt="ktm" /></li>
-                            <li><img src={auteco} alt="auteco" /></li>
-                        </ul>
+                        </h5>
+                        <Slider {...customerSettings}>
+                            <div>
+                                <ul>
+                                    <li><img src={casahonda} alt="casahonda" /></li>
+                                    <li><img src={credibike} alt="credibike" /></li>
+                                    <li><img src={hondabogota} alt="hondabogota" /></li>
+                                    <li><img src={motoagil} alt="motoagil" /></li>
+                                    <li><img src={motomax} alt="motomax" /></li>
+                                    <li><img src={motosas} alt="motosas" /></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><img src={motosymotos} alt="motosymotos" /></li>
+                                    <li><img src={servihonda} alt="servihonda" /></li>
+                                    <li><img src={hondanarino} alt="hondanarino" /></li>
+                                    <li><img src={zafras} alt="zafras" /></li>
+                                    <li><img src={kawa} alt="kawasaki" /></li>
+                                </ul>
+                            </div>
+                        </Slider>
                     </section>
                 </div>
             </main>
