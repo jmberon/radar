@@ -20,9 +20,9 @@ import motosymotos from "../images/companies/MotosYMotos.jpeg"
 import servihonda from "../images/companies/Servihonda.jpeg"
 import zafras from "../images/companies/Zafras.jpeg"
 
-import consultoria from "../images/services/Consultoria.png"
-import inventarios from "../images/services/Inventarios.png"
-import talleres from "../images/services/Talleres.png"
+import consultoria from "../images/services/consultoria.png"
+import inventarios from "../images/services/inventarios.png"
+import talleres from "../images/services/talleres.png"
 
 library.add(faArrowRight)
 
