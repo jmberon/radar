@@ -22,7 +22,7 @@ import zafras from "../images/companies/Zafras.jpeg"
 
 import consultoria from "../images/services/consultoria.png"
 import inventarios from "../images/services/inventarios.png"
-import talleres from "../images/services/talleres.png"
+import cursos from "../images/services/cursos.png"
 
 library.add(faArrowRight)
 
@@ -150,7 +150,7 @@ export default class Layout extends Component {
                                 <h3>Talleres y Cursos</h3>
                                 <p>Tips cortos y EFECTIVOS</p>
                                 <button>DESCUBRE LOS TIPS!!</button>
-                                <img src={talleres} alt="talleres"></img>
+                                <img src={cursos} alt="cursos"></img>
                             </div>
                         </div>
                     </section>
