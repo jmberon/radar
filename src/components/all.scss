@@ -413,6 +413,8 @@ section.customers {
 
             img {
                 max-width: 40%;
+                margin: 0 auto;
+
                 @media (min-width: 600px) {
                     max-width: 80%;
                 }
