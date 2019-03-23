@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Helmet } from "react-helmet";
 import Slider from "react-slick";
 import { Navbar } from "./Navbar"
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -55,6 +56,13 @@ export default class Layout extends Component {
         };
 
         return (<div className="layout">
+
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Verificarte</title>
+                <link rel="icon" type="image/png" href="favicon.ico" sizes="16x16" />
+            </Helmet>
+
             <Navbar></Navbar>
 
             <main>
