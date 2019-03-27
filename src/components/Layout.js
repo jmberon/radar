@@ -25,6 +25,13 @@ import consultoria from "../images/services/consultoria.png"
 import inventarios from "../images/services/inventarios.png"
 import cursos from "../images/services/cursos.png"
 
+import verificarte from "../images/sponsors/verificarte.png"
+import emprender from "../images/sponsors/emprender.png"
+import palmira from "../images/sponsors/palmira.png"
+import presidencia from "../images/sponsors/presidencia.png"
+import sena from "../images/sponsors/sena.png"
+import fonade from "../images/sponsors/fonade.png"
+
 library.add(faArrowRight)
 
 export default class Layout extends Component {
@@ -187,6 +194,23 @@ export default class Layout extends Component {
                                 </ul>
                             </div>
                         </Slider>
+                    </section>
+                    <section className="sponsors">
+                        <h5 className="subtitle">
+                            CON EL APOYO DE
+                        </h5>
+
+                        <div>
+                            <ul>
+                                <li><img src={verificarte} alt="verificarte" /></li>
+                                <li><img src={emprender} alt="emprender" /></li>
+                                <li><img src={palmira} alt="palmira" /></li>
+                                <li><img src={presidencia} alt="presidencia" /></li>
+                                <li><img src={sena} alt="sena" /></li>
+                                <li><img src={fonade} alt="fonade" /></li>
+                            </ul>
+                        </div>
+
                     </section>
                 </div>
             </main>
