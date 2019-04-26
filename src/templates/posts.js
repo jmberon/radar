@@ -1,13 +1,15 @@
 import React, { Component } from "react"
 import Link from "gatsby-link"
 import PropTypes from "prop-types"
+import { Navbar } from "../components/Navbar";
 
 class PostsTemplate extends Component {
     render() {
         const data = this.props.data
 
         return (
-            <div>
+            <div className="layout">
+                <Navbar></Navbar>
                 <h1>Posts</h1>
 
                 {data.allWordpressPost.edges.map(({ node }) => (
