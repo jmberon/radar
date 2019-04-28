@@ -44,6 +44,7 @@ article {
     margin: 0 auto;
 
     h1 {
+        color: $radar-dark-grey;
         font-family: "MayekaBold";
         font-size: 2.5rem;
         text-align: center;
@@ -565,4 +566,32 @@ section.sponsors {
     text-align: center;
     font-size: 1.5rem;
     margin-top: 0;
+}
+
+
+// Post List
+.post-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .post {
+        flex: 1 1 50%;
+        text-align: left;
+        padding: 0 1rem;
+        box-sizing: border-box;
+
+        span {
+            border: 1px solid lightgray;
+            width: 100%;
+            display: block;
+            height: 15rem;
+        }
+
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+            color: $radar-dark-grey;
+        }
+    }
 }

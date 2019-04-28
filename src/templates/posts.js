@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "gatsby-link"
 import { Navbar } from "../components/Navbar";
+import "../components/all.scss";
 
 const NavLink = props => {
     if (!props.test) {
@@ -19,17 +20,22 @@ const IndexPage = ({ pageContext }) => {
         <div className="Layout">
             <Navbar></Navbar>
             <main>
+                <section className="post-list">
+                    {group.map(({ node }) => (
+                        <div key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
+                            {/* <img></img> */}
+                            <span></span>
+                            <Link to={'post/' + node.slug}>
+                                <h3>{node.title}</h3>
+                            </Link>
+                            <div className={"post-content"} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                            {node.date}
+                        </div>
+                    ))}
+                </section>
+
                 <h4>{pageCount} Pages</h4>
 
-                {group.map(({ node }) => (
-                    <div key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
-                        <Link to={'post/' + node.slug}>
-                            <h3>{node.title}</h3>
-                        </Link>
-                        <div className={"post-content"} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-                        {node.date}
-                    </div>
-                ))}
                 <div className="previousLink">
                     <NavLink test={first} url={"posts/" + previousUrl} text="Go to Previous Page" />
                 </div>
