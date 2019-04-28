@@ -1,40 +1,79 @@
-import React, { Component } from "react"
+import React from "react"
 import Link from "gatsby-link"
-import PropTypes from "prop-types"
 import { Navbar } from "../components/Navbar";
 
-class PostsTemplate extends Component {
-    render() {
-        const data = this.props.data
+const NavLink = props => {
+    if (!props.test) {
+        return <Link to={props.url}>{props.text}</Link>
+    } else {
+        return <span>{props.text}</span>
+    }
+}
 
-        return (
-            <div className="layout">
-                <Navbar></Navbar>
-                <h1>Posts</h1>
+const IndexPage = ({ pageContext }) => {
+    const { group, index, first, last, pageCount } = pageContext
+    const previousUrl = index - 1 === 1 ? '' : (index - 1).toString()
+    const nextUrl = (index + 1).toString()
 
-                {data.allWordpressPost.edges.map(({ node }) => (
+    return (
+        <div className="Layout">
+            <Navbar></Navbar>
+            <main>
+                <h4>{pageCount} Pages</h4>
+
+                {group.map(({ node }) => (
                     <div key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
                         <Link to={'post/' + node.slug}>
                             <h3>{node.title}</h3>
                         </Link>
-
                         <div className={"post-content"} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-
                         {node.date}
                     </div>
                 ))}
-
-            </div>
-        )
-    }
+                <div className="previousLink">
+                    <NavLink test={first} url={"posts/" + previousUrl} text="Go to Previous Page" />
+                </div>
+                <div className="nextLink">
+                    <NavLink test={last} url={"posts/" + nextUrl} text="Go to Next Page" />
+                </div>
+            </main>
+        </div>
+    )
 }
+export default IndexPage
 
-PostsTemplate.propTypes = {
-    data: PropTypes.object.isRequired,
-    edges: PropTypes.array,
-}
+// class PostsTemplate extends Component {
+//     render() {
+//         const data = this.props.data
 
-export default PostsTemplate
+//         return (
+//             <div className="layout">
+//                 <Navbar></Navbar>
+//                 <h1>Posts</h1>
+
+//                 {data.allWordpressPost.edges.map(({ node }) => (
+//                     <div key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
+//                         <Link to={'post/' + node.slug}>
+//                             <h3>{node.title}</h3>
+//                         </Link>
+
+//                         <div className={"post-content"} dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+
+//                         {node.date}
+//                     </div>
+//                 ))}
+
+//             </div>
+//         )
+//     }
+// }
+
+// PostsTemplate.propTypes = {
+//     data: PropTypes.object.isRequired,
+//     edges: PropTypes.array,
+// }
+
+// export default PostsTemplate
 
 export const pageQuery = graphql`
     query postsQuery{

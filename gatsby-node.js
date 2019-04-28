@@ -2,6 +2,7 @@ const _ = require(`lodash`);
 const Promise = require(`bluebird`);
 const path = require(`path`);
 const slash = require(`slash`);
+const createPaginatedPages = require('gatsby-paginate');
 
 const pageQuery = `
 {
@@ -28,6 +29,8 @@ const postsQuery = `
         status
         template
         format
+        title
+        date
       }
     }
   }
@@ -77,6 +80,17 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               path: `/posts/`,
               component: slash(postsTemplate)
             });
+
+            // Paginate Posts
+            createPaginatedPages({
+              edges: result.data.allWordpressPost.edges,
+              createPage: createPage,
+              pageTemplate: 'src/templates/posts.js',
+              pageLength: 4,
+              pathPrefix: 'posts',
+              buildPath: (index, pathPrefix) =>
+                index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`, // This is optional and this is the default
+            })
 
             _.each(result.data.allWordpressPost.edges, edge => {
               createPage({
