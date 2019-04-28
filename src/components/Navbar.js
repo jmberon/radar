@@ -27,7 +27,7 @@ function Navbar() {
                 <ul>
                     <ListLink to="/">Inicio</ListLink>
                     <ListLink to="/tips/">Tips</ListLink>
-                    <ListLink to="/news/">Noticias</ListLink>
+                    <ListLink to="/posts/">Noticias</ListLink>
                     <span>
                         <FontAwesomeIcon icon="bars" size="lg" color="#5D5D5D" onClick={() => toggleNav(!isCollapsed)}></FontAwesomeIcon>
                     </span>
