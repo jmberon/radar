@@ -10,10 +10,10 @@ class PostTemplate extends Component {
         return (
             <div className="Layout">
                 <Navbar></Navbar>
-                <main>
+                <article>
                     <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
                     <div dangerouslySetInnerHTML={{ __html: post.content }} />
-                </main>
+                </article>
             </div>
         )
     }

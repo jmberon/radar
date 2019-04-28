@@ -11,6 +11,8 @@
     src: url("../fonts/Mayeka\ Regular\ Demo.otf") format("opentype");
 }
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 // Reset
 body {
     margin: 0;
@@ -36,6 +38,23 @@ $border-radius: 7px;
 .layout {
     height: 100vh;
 }
+
+article {
+    max-width: 750px;
+    margin: 0 auto;
+
+    h1 {
+        font-family: "MayekaBold";
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    p {
+        color: $radar-dark-grey;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
 // header
 header {
     display: grid;
