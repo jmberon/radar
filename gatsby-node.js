@@ -31,6 +31,13 @@ const postsQuery = `
         format
         title
         date
+        categories {
+          id
+          name
+        }
+        content
+        excerpt
+        jetpack_featured_media_url
       }
     }
   }

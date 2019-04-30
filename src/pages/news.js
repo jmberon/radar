@@ -11,11 +11,6 @@ const NavLink = props => {
     }
 }
 
-// const postList = () => {
-
-
-//}
-
 const IndexPage = ({ pageContext }) => {
     const { group, index, first, last, pageCount } = pageContext
     const previousUrl = index - 1 === 1 ? '' : (index - 1).toString()
@@ -23,15 +18,16 @@ const IndexPage = ({ pageContext }) => {
 
     console.log(group);
 
+
     return (
         <div className="Layout">
             <Navbar></Navbar>
             <main>
                 <section className="post-list">
                     {group.map(({ node }) => {
-                        const isTip = node.categories && node.categories.findIndex(c => c.name.toLowerCase() === "tips") >= 0;
+                        const isNoticia = node.categories && node.categories.findIndex(c => c.name.toLowerCase() === "noticias") >= 0;
 
-                        return isTip && <div key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
+                        return isNoticia && <div key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
                             {node.jetpack_featured_media_url && <img src={node.jetpack_featured_media_url} alt=""></img>}
                             {!node.jetpack_featured_media_url && <span></span>}
                             <Link to={'post/' + node.slug}>

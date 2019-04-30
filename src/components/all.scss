@@ -577,12 +577,19 @@ section.sponsors {
     margin: 0 auto;
 
     .post {
-        flex: 1 1 50%;
+        flex: 1 1 auto;
         text-align: left;
         padding: 0 1rem;
         box-sizing: border-box;
+        position: relative;
 
-        span {
+        @media (min-width: 700px) {
+            flex: 1 1 50%;
+        }
+
+
+        span, img {
+            background-color: lightgray;
             border: 1px solid lightgray;
             width: 100%;
             display: block;
@@ -593,5 +600,28 @@ section.sponsors {
             font-family: 'Open Sans', sans-serif;
             color: $radar-dark-grey;
         }
+    }
+}
+
+.pagination {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-family: "MayekaRegular";
+}
+
+.link {
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    padding: 0.375rem;
+    display: inline-block;
+
+    a {
+        color: $radar-green;
+        text-decoration: none;
+    }
+
+    span {
+        cursor: default;
     }
 }
