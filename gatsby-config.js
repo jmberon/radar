@@ -26,7 +26,7 @@ module.exports = {
                     // wpcom_user: "gatsbyjswpexample@gmail.com",
                     // wpcom_pass: process.env.WORDPRESS_PASSWORD,
                 },
-                includedRoutes: ["**/posts", "**/pages", "**/categories"],
+                includedRoutes: ["**/posts", "**/categories"],
                 // excludedRoutes: ["**/media", "**/blocks", "**/feedback", "**/jp_pay_order", "**/jp_pay_product",
                 //     "**/types", "**/statuses", "**/taxonomies", "**/categories", "**/tags", "**/users", "**/comments",
                 //     "**/search", , "**/block-renderer", "**/themes"],
