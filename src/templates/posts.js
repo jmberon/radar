@@ -17,8 +17,6 @@ class PostList extends Component {
         const { group, index, first, last, pageCount } = this.props.context
         const previousUrl = index - 1 === 1 ? '' : (index - 1).toString()
         const nextUrl = (index + 1).toString()
-        console.log("props", this.props);
-        console.log("group", group);
 
         const groupByPostType = group.filter(({ node }) => node.categories && node.categories.findIndex(c => c.name.toLowerCase() === this.props.postType) >= 0);
 
@@ -57,7 +55,7 @@ class PostList extends Component {
 
 }
 
-const IndexPage = ({ pageContext, location }) => {
+const IndexPage = ({ location, pageContext }) => {
     return <PostList context={pageContext} postType={location.state.type}></PostList>
 }
 export default IndexPage
