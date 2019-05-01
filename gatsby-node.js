@@ -88,12 +88,14 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               component: slash(postsTemplate)
             });
 
+            console.log("allPosts", result.data.allWordpressPost.edges);
+
             // Paginate Posts
             createPaginatedPages({
               edges: result.data.allWordpressPost.edges,
               createPage: createPage,
               pageTemplate: 'src/templates/posts.js',
-              pageLength: 4,
+              pageLength: 6,
               pathPrefix: 'posts',
               buildPath: (index, pathPrefix) =>
                 index > 1 ? `${pathPrefix}/${index}` : `/${pathPrefix}`, // This is optional and this is the default
