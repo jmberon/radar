@@ -56,6 +56,6 @@ class PostList extends Component {
 }
 
 const IndexPage = ({ location, pageContext }) => {
-    return <PostList context={pageContext} postType={location.state.type}></PostList>
+    return <PostList context={pageContext} postType={location.state && location.state.type}></PostList>
 }
 export default IndexPage
