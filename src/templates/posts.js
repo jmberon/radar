@@ -18,6 +18,8 @@ class PostList extends Component {
         const previousUrl = index - 1 === 1 ? '' : (index - 1).toString()
         const nextUrl = (index + 1).toString()
 
+        if (!group) { return <p>No hay artículos en este momento</p> }
+
         const groupByPostType = group.filter(({ node }) => node.categories && node.categories.findIndex(c => c.name.toLowerCase() === this.props.postType) >= 0);
 
         return (
