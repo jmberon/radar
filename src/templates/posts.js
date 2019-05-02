@@ -31,9 +31,9 @@ class PostList extends Component {
                             const isType = node.categories && node.categories.findIndex(c => c.name.toLowerCase() === this.props.postType) >= 0;
 
                             return isType && <div key={node.slug} className={"post"} style={{ marginBottom: 50 }}>
-                                {node.jetpack_featured_media_url && <img src={node.jetpack_featured_media_url} alt=""></img>}
-                                {!node.jetpack_featured_media_url && <span></span>}
                                 <Link to={'post/' + node.slug}>
+                                    {node.jetpack_featured_media_url && <img src={node.jetpack_featured_media_url} alt=""></img>}
+                                    {!node.jetpack_featured_media_url && <span></span>}
                                     <h3>{node.title}</h3>
                                 </Link>
                             </div>

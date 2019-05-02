@@ -53,6 +53,7 @@ article {
     p {
         color: $radar-dark-grey;
         font-family: 'Open Sans', sans-serif;
+        text-align: justify;
     }
 }
 
@@ -594,6 +595,10 @@ section.sponsors {
             width: 100%;
             display: block;
             height: 15rem;
+        }
+
+        a {
+            text-decoration: none;
         }
 
         h3 {
